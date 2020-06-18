@@ -1,13 +1,9 @@
-import { IconButton, useMediaQuery } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { Menu } from '@material-ui/icons';
 import { default as React } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
 import colors from '../../constants/colors';
 
 const useStyles = makeStyles((theme) => ({
@@ -24,14 +20,14 @@ const useStyles = makeStyles((theme) => ({
 
 const AppHeader = () => {
   const classes = useStyles();
-  const theme = useTheme();
-  const sm = useMediaQuery(theme.breakpoints.up('sm'));
-  const history = useHistory();
-  const location = useLocation();
-  const navigationOptions = [
-    { name: 'Blogs', key: 'blogs', onClick: () => history.push('/blogs') },
-    { name: 'About', key: 'about', onClick: () => history.push('/about') },
-  ];
+  // const theme = useTheme();
+  // const sm = useMediaQuery(theme.breakpoints.up('sm'));
+  // const history = useHistory();
+  // const location = useLocation();
+  // const navigationOptions = [
+  //   { name: 'Blogs', key: 'blogs', onClick: () => history.push('/blogs') },
+  //   { name: 'About', key: 'about', onClick: () => history.push('/about') },
+  // ];
 
   return (
     <div className={classes.root}>
@@ -69,32 +65,18 @@ const AppHeader = () => {
               Saharsh Goyal
             </Typography>
           </div>
-          {!sm ? (
-            <IconButton
-              edge='start'
-              className={classes.menuButton}
+
+          {/* {navigationOptions.map(({ key, name, onClick }) => (
+            <Button
+              variant={location.pathname.includes(key) ? 'outlined' : 'text'}
+              style={{ textTransform: 'none' }}
               color='inherit'
-              aria-label='menu'
+              key={key}
+              onClick={onClick}
             >
-              <Menu />
-            </IconButton>
-          ) : (
-            <div>
-              {navigationOptions.map(({ key, name, onClick }) => (
-                <Button
-                  variant={
-                    location.pathname.includes(key) ? 'outlined' : 'text'
-                  }
-                  style={{ textTransform: 'none' }}
-                  color='inherit'
-                  key={key}
-                  onClick={onClick}
-                >
-                  {name}
-                </Button>
-              ))}
-            </div>
-          )}
+              {name}
+            </Button>
+          ))} */}
         </Toolbar>
       </AppBar>
     </div>

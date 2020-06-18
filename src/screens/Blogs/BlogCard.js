@@ -1,4 +1,4 @@
-import { Button, CardActionArea, CardActions } from '@material-ui/core';
+import { CardActionArea } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -27,17 +27,18 @@ export default function RecipeReviewCard({
   thumbnail,
   title = '',
   content = '',
+  link,
 }) {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={thumbnail}
-          title='Paella dish'
-        />
+      <CardActionArea
+        onClick={() => {
+          window.open(link, '_blank');
+        }}
+      >
+        <CardMedia className={classes.media} image={thumbnail} title={title} />
         <CardContent>
           <Typography gutterBottom variant='h5' component='h2'>
             {title}
@@ -47,14 +48,14 @@ export default function RecipeReviewCard({
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      {/* <CardActions>
         <Button size='small' color='primary'>
           Share
         </Button>
         <Button size='small' color='primary'>
           Learn More
         </Button>
-      </CardActions>
+      </CardActions> */}
     </Card>
   );
 }

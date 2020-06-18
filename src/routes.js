@@ -5,15 +5,9 @@ import {
   ThemeProvider,
 } from '@material-ui/core';
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Redirect,
-  Route,
-  Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AppHeader from './components/AppHeader/AppHeader';
 import About from './screens/About/About';
-import Blogs from './screens/Blogs/Blogs';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -37,13 +31,13 @@ export default () => {
         <AppHeader />
         <Container maxWidth='md'>
           <Switch>
-            <Route exact path='/blogs'>
+            {/* <Route exact path='/blogs'>
               <Blogs />
-            </Route>
-            <Route exact path='/about'>
+            </Route> */}
+            <Route exact path='/'>
               <About />
             </Route>
-            <Redirect exact from='/' to='about' />
+            {/* <Redirect exact from='/' to='about' /> */}
           </Switch>
         </Container>
       </ThemeProvider>

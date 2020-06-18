@@ -1,26 +1,16 @@
-import {
-  Box,
-  Grid,
-  Link,
-  makeStyles,
-  Typography,
-  useTheme,
-} from '@material-ui/core';
+import { Box, Grid, Link, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
 import colors from '../../constants/colors';
+import Blogs from '../Blogs/Blogs';
 
 const useStyles = makeStyles({
   about: {
-    // a: {
     '& a:link': {
       color: colors.light,
-      //   backgroundColor: colors.light,
     },
     '& a:visited': {
       color: 'orangered',
-      //   backgroundColor: colors.light,
     },
-    // },
   },
   logo: {
     width: '20px',
@@ -29,12 +19,11 @@ const useStyles = makeStyles({
 });
 
 const About = () => {
-  const theme = useTheme();
   const classes = useStyles();
   return (
-    <Grid xs={12}>
+    <Grid item xs={12}>
       <Box pt={25} pr={1} pl={1} className={classes.about}>
-        <Typography variant='h3' className={theme.typography}>
+        <Typography variant='h3'>
           Hi! I'm Saharsh{' '}
           <span role='img' aria-label="Hi, I'm Saharsh!">
             👋
@@ -77,6 +66,7 @@ const About = () => {
             .
           </Typography>
         </Box>
+        <Blogs />
       </Box>
     </Grid>
   );
