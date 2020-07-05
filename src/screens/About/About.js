@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import colors from '../../constants/colors';
+import Blogs from '../Blogs/Blogs';
 
 const useStyles = makeStyles((theme) => ({
   about: {
@@ -51,6 +52,7 @@ const About = () => {
           </Typography>
         </Grid>
       </Grid>
+      <Blogs />
       <Box pt={5}>
         <Typography gutterBottom variant='h5'>
           About

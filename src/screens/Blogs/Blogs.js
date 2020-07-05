@@ -29,14 +29,8 @@ const Blogs = () => {
     fetchBlogs();
   }, []);
   return (
-    <Box pt={15} pr={5} pl={5}>
-      <Typography
-        variant='h2'
-        style={{
-          marginBottom: 20,
-          borderBottom: '1px solid white',
-        }}
-      >
+    <Box>
+      <Typography variant='h5' gutterBottom>
         Blogs
       </Typography>
       <Grid container spacing={3}>
