@@ -47,20 +47,20 @@ const About = () => {
         </Grid>
         <Grid item md={6} lg={8}>
           <Typography variant='h5'>
-            Hi, I'm Saharsh Goyal. I'm a software engineer and love to help
-            people grow their businesses by creating web and mobile apps.
+            Hi, I'm Saharsh Goyal. I help people grow their businesses by
+            creating web and mobile apps.
           </Typography>
         </Grid>
       </Grid>
       <Blogs />
-      <Box pt={5}>
+      <Box mt={5}>
         <Typography gutterBottom variant='h5'>
           About
         </Typography>
         <Typography gutterBottom paragraph>
-          I'm a software engineer. I was born in 1995 and grew up in Indore,
-          India. After graduating High School, I went to SVITS where I graduated
-          with a Bachelor's degree in Computer Science Engineering.
+          I'm a software engineer from Indore, currently living in Mumbai,
+          India. I've written code for Systango Technologies and Xebia IT
+          Architects.
         </Typography>
         <Typography gutterBottom paragraph>
           I've built web and mobile apps under various domains including
@@ -92,6 +92,17 @@ const About = () => {
           </Link>
           .
         </Typography>
+      </Box>
+
+      <Box mt={5}>
+        <Typography gutterBottom variant='h5'>
+          Contact
+        </Typography>
+        <Typography>
+          E-mail:{' '}
+          <a href='mailto:contact@saharshgoyal.com'>contact@saharshgoyal.com</a>
+        </Typography>
+        <Typography gutterBottom>Mobile: 8109789680</Typography>
       </Box>
     </Box>
   );

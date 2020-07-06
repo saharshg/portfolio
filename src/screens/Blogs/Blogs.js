@@ -29,7 +29,7 @@ const Blogs = () => {
     fetchBlogs();
   }, []);
   return (
-    <Box>
+    <Box mt={5}>
       <Typography variant='h5' gutterBottom>
         Blogs
       </Typography>

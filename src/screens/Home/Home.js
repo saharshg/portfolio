@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <AppHeader />
       <Grid container className={classes.content}>
-        <Grid item xs={8} md={6}>
+        <Grid item xs={10} sm={8} md={6}>
           <About />
         </Grid>
       </Grid>
