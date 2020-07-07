@@ -1,17 +1,11 @@
-import {
-  Box,
-  Grid,
-  Link,
-  makeStyles,
-  Typography,
-  useTheme,
-} from '@material-ui/core';
+import { Box, Link, makeStyles, Typography, useTheme } from '@material-ui/core';
 import React from 'react';
-import Contact from '../../components/Contact/Contact';
 import colors from '../../constants/colors';
 import Blogs from '../Blogs/Blogs';
+import Contact from './Contact';
+import Intro from './Intro';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   about: {
     '& a:link': {
       color: colors.light,
@@ -20,36 +14,16 @@ const useStyles = makeStyles((theme) => ({
       color: 'orangered',
     },
   },
-  avatar: {
-    height: theme.spacing(25),
-  },
-  intro: {
-    justifyContent: 'center',
-  },
-}));
+});
 
 const About = () => {
   const classes = useStyles();
   const theme = useTheme();
   return (
     <Box className={classes.about} pt={theme.spacing(1)}>
-      <Grid container className={classes.intro}>
-        <Grid item md={6} lg={4}>
-          <img
-            title='Saharsh Goyal'
-            alt='Saharsh Goyal'
-            src='/images/photo.png'
-            className={classes.avatar}
-          />
-        </Grid>
-        <Grid item md={6} lg={8}>
-          <Typography variant='h5'>
-            Hi, I'm Saharsh Goyal. I help people grow their businesses by
-            creating web and mobile apps.
-          </Typography>
-        </Grid>
-      </Grid>
+      <Intro />
       <Blogs />
+
       <Box mt={5}>
         <Typography gutterBottom variant='h5'>
           About
