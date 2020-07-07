@@ -7,6 +7,7 @@ import {
   useTheme,
 } from '@material-ui/core';
 import React from 'react';
+import Contact from '../../components/Contact/Contact';
 import colors from '../../constants/colors';
 import Blogs from '../Blogs/Blogs';
 
@@ -59,8 +60,8 @@ const About = () => {
         </Typography>
         <Typography gutterBottom paragraph>
           I'm a software engineer from Indore, currently living in Mumbai,
-          India. I've written code for IDFC First Bank, Xebia IT
-          Architects and Systango Technologies .
+          India. I've written code for IDFC First Bank, Xebia IT Architects and
+          Systango Technologies.
         </Typography>
         <Typography gutterBottom paragraph>
           I've built web and mobile apps under various domains including
@@ -94,15 +95,7 @@ const About = () => {
         </Typography>
       </Box>
 
-      <Box mt={5} mb={5}>
-        <Typography gutterBottom variant='h5'>
-          Contact
-        </Typography>
-        <Typography>
-          E-mail:{' '}
-          <a href='mailto:contact@saharshgoyal.com'>contact@saharshgoyal.com</a>
-        </Typography>
-      </Box>
+      <Contact />
     </Box>
   );
 };

@@ -21,7 +21,6 @@ const Blogs = () => {
           itemRows.push(item);
         });
         setBlogs(itemRows);
-        console.log(itemRows);
       });
   };
 
