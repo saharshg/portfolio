@@ -20,10 +20,6 @@ const useStyles = makeStyles((theme) => ({
       color: 'orangered',
     },
   },
-  logo: {
-    width: '20px',
-    height: '20px',
-  },
   avatar: {
     height: theme.spacing(25),
   },
@@ -69,11 +65,6 @@ const About = () => {
           focused mainly on UI Development using{' '}
           <Link target='_blank' href='https://reactjs.org/'>
             React
-            <img
-              src='/images/react-logo.svg'
-              alt='react logo'
-              className={classes.logo}
-            />
           </Link>
           ,{' '}
           <Link target='_blank' href='https://reactnative.dev/'>
@@ -85,11 +76,6 @@ const About = () => {
             href='https://github.com/getify/You-Dont-Know-JS'
           >
             Javascript
-            <img
-              src='/images/js-logo.svg'
-              alt='js logo'
-              className={classes.logo}
-            />
           </Link>
           .
         </Typography>

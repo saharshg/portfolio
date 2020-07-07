@@ -1,4 +1,5 @@
 import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MailIcon from '@material-ui/icons/Mail';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -22,7 +23,7 @@ const Contact = () => {
   const classes = useStyles();
   return (
     <Box mt={5} mb={5}>
-      <Grid container gutterBottom className={classes.links}>
+      <Grid container className={classes.links}>
         <Grid item>
           <a
             rel='noopener noreferrer'
@@ -35,13 +36,14 @@ const Contact = () => {
         </Grid>
         <Grid item>
           <a
-            href='mailto:contact@saharshgoyal.com'
+            href='https://github.com/saharshg'
             rel='noopener noreferrer'
             target='_blank'
           >
-            <MailIcon color='secondary' />
+            <GitHubIcon color='secondary' />
           </a>
         </Grid>
+
         <Grid item>
           <a
             href='https://www.linkedin.com/in/saharsh-goyal-22b1b4113/'
@@ -49,6 +51,15 @@ const Contact = () => {
             target='_blank'
           >
             <LinkedInIcon color='secondary' />
+          </a>
+        </Grid>
+        <Grid item>
+          <a
+            href='mailto:contact@saharshgoyal.com'
+            rel='noopener noreferrer'
+            target='_blank'
+          >
+            <MailIcon color='secondary' />
           </a>
         </Grid>
       </Grid>
