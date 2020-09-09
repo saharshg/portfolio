@@ -14,15 +14,26 @@ const useStyles = makeStyles((theme) => ({
   links: {
     borderTop: '1px solid darkmagenta',
     display: 'flex',
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
+    paddingTop: theme.spacing(1),
     justifyContent: 'space-evenly',
+    borderTopLeftRadius: '100px',
+    borderTopRightRadius: '100px',
   },
 }));
 const Contact = () => {
   const classes = useStyles();
   return (
-    <Box mt={5} mb={5}>
+    <Box mb={1}>
+      <Typography
+        className={classes.contact}
+        variant='overline'
+        display='block'
+        gutterBottom
+      >
+        <span role='img' aria-label='heart'>
+          Made with ❤️ by Saharsh Goyal
+        </span>
+      </Typography>
       <Grid container className={classes.links}>
         <Grid item>
           <a
@@ -63,16 +74,6 @@ const Contact = () => {
           </a>
         </Grid>
       </Grid>
-      <Typography
-        className={classes.contact}
-        variant='overline'
-        display='block'
-        gutterBottom
-      >
-        <span role='img' aria-label='heart'>
-          Made with ❤️ by Saharsh Goyal
-        </span>
-      </Typography>
     </Box>
   );
 };
