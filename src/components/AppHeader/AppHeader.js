@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   IconButton,
   Switch,
@@ -68,43 +69,45 @@ const AppHeader = () => {
             inputProps={{ 'aria-label': 'change mode' }}
           />
 
-          {sm ? (
-            <IconButton
-              edge='start'
-              color='inherit'
-              aria-label='menu'
-              onClick={toggleMenu}
-            >
-              <MenuIcon />
-            </IconButton>
-          ) : (
-            menuOptions.map(({ title, link }) => {
-              if (title !== menuOptions[0].title) {
-                return (
-                  <Button
-                    style={{ textTransform: 'none' }}
-                    color='inherit'
-                    key={title}
-                    onClick={() => history.push(link)}
-                  >
-                    {title}
-                  </Button>
-                );
-              }
+          <Box style={{ display: 'flex' }}>
+            {sm ? (
+              <IconButton
+                edge='start'
+                color='inherit'
+                aria-label='menu'
+                onClick={toggleMenu}
+              >
+                <MenuIcon />
+              </IconButton>
+            ) : (
+              menuOptions.map(({ title, link }) => {
+                if (title !== menuOptions[0].title) {
+                  return (
+                    <Button
+                      style={{ textTransform: 'none' }}
+                      color='inherit'
+                      key={title}
+                      onClick={() => history.push(link)}
+                    >
+                      {title}
+                    </Button>
+                  );
+                }
 
-              return null;
-            })
-          )}
-          {!sm && (
-            <Typography
-              variant='h6'
-              onClick={() => history.push('/')}
-              className={classes.title}
-              color='secondary'
-            >
-              SG
-            </Typography>
-          )}
+                return null;
+              })
+            )}
+            {!sm && (
+              <Typography
+                variant='h6'
+                onClick={() => history.push('/')}
+                className={classes.title}
+                color='secondary'
+              >
+                SG
+              </Typography>
+            )}
+          </Box>
         </Toolbar>
       </AppBar>
       <AppMenu
