@@ -17,7 +17,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import AppHeader from './components/AppHeader/AppHeader';
 import ScrollTop from './components/ScrollTop/ScrollTop';
 import colors from './constants/colors';
