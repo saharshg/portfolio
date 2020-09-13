@@ -83,12 +83,7 @@ const AppHeader = () => {
               menuOptions.map(({ title, link }) => {
                 if (title !== menuOptions[0].title) {
                   return (
-                    <Button
-                      style={{ textTransform: 'none' }}
-                      color='inherit'
-                      key={title}
-                      onClick={() => history.push(link)}
-                    >
+                    <Button key={title} onClick={() => history.push(link)}>
                       {title}
                     </Button>
                   );

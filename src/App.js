@@ -23,7 +23,7 @@ import ScrollTop from './components/ScrollTop/ScrollTop';
 import colors from './constants/colors';
 import { AppContext } from './Context/context';
 import Contact from './screens/Contact';
-const Home = lazy(() => import('./screens/Home'));
+const Home = lazy(() => import('./screens/Home/Home'));
 const BlogList = lazy(() => import('./screens/Blogs/BlogList'));
 const Blogs = lazy(() => import('./screens/Blogs/Blogs'));
 const About = lazy(() => import('./screens/About'));
