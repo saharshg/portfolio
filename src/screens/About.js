@@ -8,8 +8,8 @@ const About = () => {
         About
       </Typography>
       <Typography gutterBottom paragraph>
-        I'm a Computer Software Engineer from Indore, currently working as
-        Consultant for IDFC First Bank Mumbai, India. I've written code for
+        I'm a Computer Science Engineer from Indore, currently working as
+        Consultant for IDFC FIRST Bank Mumbai, India. I've written code for
         Xebia IT Architects and Systango Technologies.
       </Typography>
       <Typography gutterBottom paragraph>

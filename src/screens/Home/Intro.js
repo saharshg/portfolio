@@ -25,8 +25,8 @@ const Intro = () => {
       </Grid>
       <Grid item md={6} lg={8}>
         <Typography variant='h5'>
-          Hi, I'm Saharsh Goyal. I help people to grow their businesses by
-          creating web and mobile apps.
+          Hi, I'm Saharsh Goyal. I help people to grow their businesses with
+          quality software.
         </Typography>
       </Grid>
     </Grid>

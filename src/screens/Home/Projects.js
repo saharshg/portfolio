@@ -63,7 +63,7 @@ const Projects = () => {
 
 const projects = [
   {
-    name: 'IdfcFirst Bank',
+    name: 'Idfc First Bank',
     link: 'https://www.idfcfirstbank.com/',
     description: 'Personal banking app and website',
   },
