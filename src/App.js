@@ -5,7 +5,6 @@ import {
   Grid,
   makeStyles,
   ThemeProvider,
-  useMediaQuery,
 } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
@@ -80,7 +79,6 @@ const App = () => {
   const { mode } = appState;
 
   const [theme, setTheme] = useState(createTheme('light'));
-  const sm = useMediaQuery(theme.breakpoints.down('sm'));
 
   useEffect(() => {
     if (mode === 'light') {
@@ -99,7 +97,7 @@ const App = () => {
 
           <Grid container className={classes.content}>
             <Grid item xs={10} sm={8} md={6}>
-              <Box className={classes.about} pt={sm ? 0 : theme.spacing(1)}>
+              <Box className={classes.about}>
                 <Suspense fallback={<div>Loading...</div>}>
                   <Switch>
                     <Route path='/about'>
