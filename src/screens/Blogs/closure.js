@@ -35,6 +35,16 @@ const Closure = () => {
   const preventDefault = (e) => e.preventDefault();
   return (
     <Box>
+      <meta property='og:type' content='blog' />
+      <meta
+        property='og:url'
+        content='https://saharshgoyal.com/#/blogs/closures'
+      />
+      <meta property='og:title' content='Closures in JavaScript' />
+      <meta
+        property='og:description'
+        content='Briefly understanding closures.'
+      />
       <BlogHeader
         title='Closures'
         featureImage={{
