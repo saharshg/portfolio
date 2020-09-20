@@ -36,6 +36,7 @@ const Blogs = () => {
     <Box>
       <Helmet>
         <meta charSet='utf-8' />
+        <meta property='og:type' content='blog' />
         <meta property='og:url' content={shareUrl} />
         <meta property='og:title' content={title} />
         <meta name='keywords' content={keywords.toString()} />
