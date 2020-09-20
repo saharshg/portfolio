@@ -23,7 +23,6 @@ const BlogList = () => {
           </ListItem>
         ))}
       </List>
-      {/* <Closure /> */}
     </>
   );
 };

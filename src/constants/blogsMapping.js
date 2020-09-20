@@ -8,8 +8,15 @@ export const blogsMapping = {
     modifiedAt: 'September 16, 2020',
     slug:
       'Briefly understanding closure and lexical environment in javascript.',
-    tags: ['javascript', 'closures', 'scoping'],
+    keywords: ['javascript', 'closures', 'scoping', 'lexical environment'],
     component: <Closure />,
     url: 'https://saharshgoyal.com/#/blogs/closures',
+    featureImage: {
+      src:
+        'https://images.unsplash.com/photo-1450562624248-869a3ec195f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      url:
+        'https://unsplash.com/@cblack09?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText',
+      credit: 'Cody Black',
+    },
   },
 };

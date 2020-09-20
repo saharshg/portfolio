@@ -7,6 +7,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import { default as React } from 'react';
+import { blogsMapping } from '../../constants/blogsMapping';
 import BlogHeader from './components/blogHeader';
 import Image from './components/image';
 import Paragraph from './components/paragraph';
@@ -33,28 +34,10 @@ const Closure = () => {
   };
 
   const preventDefault = (e) => e.preventDefault();
+  const { title, featureImage } = blogsMapping.closures;
   return (
     <Box>
-      <meta property='og:type' content='blog' />
-      <meta
-        property='og:url'
-        content='https://saharshgoyal.com/#/blogs/closures'
-      />
-      <meta property='og:title' content='Closures in JavaScript' />
-      <meta
-        property='og:description'
-        content='Briefly understanding closures.'
-      />
-      <BlogHeader
-        title='Closures'
-        featureImage={{
-          src:
-            'https://images.unsplash.com/photo-1450562624248-869a3ec195f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
-          credit: 'Cody Black',
-          url:
-            'https://unsplash.com/@cblack09?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText',
-        }}
-      />
+      <BlogHeader title={title} featureImage={featureImage} />
 
       <Paragraph>
         Definition: A <strong>closure</strong> is a combination of a function

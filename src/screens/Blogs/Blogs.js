@@ -1,5 +1,6 @@
 import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 import {
   FacebookIcon,
@@ -28,14 +29,25 @@ const Blogs = () => {
   const classes = useStyles();
   const { blog } = useParams();
   const shareUrl = `https://saharshgoyal.com/#/blogs/${blog}`;
-  const title = blogsMapping[blog].title;
-  const createdAt = blogsMapping[blog].createdAt;
+  const { title, modifiedAt, slug, featureImage, keywords } = blogsMapping[
+    blog
+  ];
   return (
     <Box>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <meta property='og:url' content={shareUrl} />
+        <meta property='og:title' content={title} />
+        <meta name='keywords' content={keywords.toString()} />
+        <meta property='og:description' content={slug} />
+        <meta property='og:image' content={featureImage.src} />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='628' />
+      </Helmet>
       {blogsMapping[blog].component}
       <Box className={classes.blogSharing}>
         <Grid item>
-          <Typography color='secondary'>{createdAt}</Typography>
+          <Typography color='secondary'>{modifiedAt}</Typography>
         </Grid>
         <Grid item sm={4} className={classes.shareButtons}>
           <TwitterShareButton url={shareUrl} title={title}>
