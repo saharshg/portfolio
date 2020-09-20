@@ -38,10 +38,10 @@ const Projects = () => {
       <Slider {...settings}>
         {projects.map((project) => (
           <a
+            key={project.name}
             target='_blank'
             rel='noopener noreferrer'
             href={project.link}
-            key={project.src}
             className={classes.project}
           >
             <Typography

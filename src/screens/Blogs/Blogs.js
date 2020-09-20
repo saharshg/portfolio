@@ -35,8 +35,9 @@ const Blogs = () => {
   return (
     <Box>
       <Helmet>
-        <meta charSet='utf-8' />
-        <meta property='og:type' content='blog' />
+        <meta name='title' content={title} />
+        <meta name='description' content={slug} />
+        <meta property='og:type' content='website' />
         <meta property='og:url' content={shareUrl} />
         <meta property='og:title' content={title} />
         <meta name='keywords' content={keywords.toString()} />
@@ -44,6 +45,12 @@ const Blogs = () => {
         <meta property='og:image' content={featureImage.src} />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='628' />
+
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content={shareUrl} />
+        <meta property='twitter:title' content={title} />
+        <meta property='twitter:description' content={slug} />
+        <meta property='twitter:image' content={featureImage.src} />
       </Helmet>
       {blogsMapping[blog].component}
       <Box className={classes.blogSharing}>
