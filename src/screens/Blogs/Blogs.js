@@ -28,8 +28,7 @@ const useStyles = makeStyles((theme) => ({
 const Blogs = () => {
   const classes = useStyles();
   const { blog } = useParams();
-  const shareUrl = `https://saharshgoyal.com/#/blogs/${blog}`;
-  const { title, modifiedAt, slug, featureImage, keywords } = blogsMapping[
+  const { title, modifiedAt, slug, featureImage, keywords, url } = blogsMapping[
     blog
   ];
   return (
@@ -38,7 +37,7 @@ const Blogs = () => {
         <meta name='title' content={title} />
         <meta name='description' content={slug} />
         <meta property='og:type' content='website' />
-        <meta property='og:url' content={shareUrl} />
+        <meta property='og:url' content={url} />
         <meta property='og:title' content={title} />
         <meta name='keywords' content={keywords.toString()} />
         <meta property='og:description' content={slug} />
@@ -47,7 +46,7 @@ const Blogs = () => {
         <meta property='og:image:height' content='628' />
 
         <meta property='twitter:card' content='summary_large_image' />
-        <meta property='twitter:url' content={shareUrl} />
+        <meta property='twitter:url' content={url} />
         <meta property='twitter:title' content={title} />
         <meta property='twitter:description' content={slug} />
         <meta property='twitter:image' content={featureImage.src} />
@@ -58,16 +57,16 @@ const Blogs = () => {
           <Typography color='secondary'>{modifiedAt}</Typography>
         </Grid>
         <Grid item sm={4} className={classes.shareButtons}>
-          <TwitterShareButton url={shareUrl} title={title}>
+          <TwitterShareButton url={url} title={title}>
             <TwitterIcon size={32} round />
           </TwitterShareButton>
-          <LinkedinShareButton url={shareUrl}>
+          <LinkedinShareButton url={url}>
             <LinkedinIcon size={32} round />
           </LinkedinShareButton>
-          <FacebookShareButton url={shareUrl} quote={title}>
+          <FacebookShareButton url={url} quote={title}>
             <FacebookIcon size={32} round={true} />
           </FacebookShareButton>
-          <WhatsappShareButton url={shareUrl} title={title} separator=':: '>
+          <WhatsappShareButton url={url} title={title} separator=':: '>
             <WhatsappIcon size={32} round />
           </WhatsappShareButton>
         </Grid>
