@@ -28,18 +28,18 @@ const useStyles = makeStyles((theme) => ({
 const Blogs = () => {
   const classes = useStyles();
   const { blog } = useParams();
-  const { title, modifiedAt, slug, featureImage, keywords, url } = blogsMapping[
+  const { title, modifiedAt, slug, featureImage, url, hashtags } = blogsMapping[
     blog
   ];
   return (
     <Box>
       <Helmet>
+        <title>{title}</title>
         <meta name='title' content={title} />
         <meta name='description' content={slug} />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={url} />
         <meta property='og:title' content={title} />
-        <meta name='keywords' content={keywords.toString()} />
         <meta property='og:description' content={slug} />
         <meta property='og:image' content={featureImage.src} />
         <meta property='og:image:width' content='1200' />
@@ -57,16 +57,29 @@ const Blogs = () => {
           <Typography color='secondary'>{modifiedAt}</Typography>
         </Grid>
         <Grid item sm={4} className={classes.shareButtons}>
-          <TwitterShareButton url={url} title={title}>
+          <TwitterShareButton url={url} title={title} hashtags={hashtags}>
             <TwitterIcon size={32} round />
           </TwitterShareButton>
-          <LinkedinShareButton url={url}>
+          <LinkedinShareButton
+            url={url}
+            title={title}
+            summary={slug}
+            source={url}
+          >
             <LinkedinIcon size={32} round />
           </LinkedinShareButton>
-          <FacebookShareButton url={url} quote={title}>
+          <FacebookShareButton
+            url={url}
+            quote={`${title}\n${slug}`}
+            hashtag={`#${hashtags[0]}`}
+          >
             <FacebookIcon size={32} round={true} />
           </FacebookShareButton>
-          <WhatsappShareButton url={url} title={title} separator=':: '>
+          <WhatsappShareButton
+            url={url}
+            title={title}
+            separator={`:: ${slug} `}
+          >
             <WhatsappIcon size={32} round />
           </WhatsappShareButton>
         </Grid>

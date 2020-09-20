@@ -7,8 +7,8 @@ export const blogsMapping = {
     createdAt: 'July 12, 2020',
     modifiedAt: 'September 16, 2020',
     slug:
-      'Briefly understanding closure and lexical environment in javascript.',
-    keywords: ['javascript', 'closures', 'scoping', 'lexical environment'],
+      'Briefly understanding closure and the lexical environment in javascript.',
+    hashtags: ['closures', 'scoping', 'javascript'],
     component: <Closure />,
     url: 'https://saharshgoyal.com/#/blogs/closures',
     featureImage: {
