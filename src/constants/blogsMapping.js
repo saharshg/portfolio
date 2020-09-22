@@ -24,7 +24,7 @@ export const blogsMapping = {
     title: 'Negative Zero in JavaScript',
     createdAt: 'September 23, 2020',
     modifiedAt: 'September 23, 2020',
-    slug: 'Significance of negative zero',
+    slug: 'Understanding negative zero and comparing objects in js.',
     hashtags: ['negativezero', 'javascript', 'object.is'],
     component: <NegativeZero />,
     url: 'https://saharshgoyal.com/#/blogs/negativezero',
