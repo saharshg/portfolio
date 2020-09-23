@@ -8,7 +8,7 @@ import Quote from './components/quote';
 import SubTitle from './components/subTitle';
 
 const NegativeZero = () => {
-  const { title, featureImage } = blogsMapping.negativeZero;
+  const { title, featureImage } = blogsMapping.negativezero;
   return (
     <Box>
       <BlogHeader title={title} featureImage={featureImage} />

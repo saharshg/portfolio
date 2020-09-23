@@ -20,7 +20,7 @@ export const blogsMapping = {
       credit: 'Cody Black',
     },
   },
-  negativeZero: {
+  negativezero: {
     title: 'Negative Zero in JavaScript',
     createdAt: 'September 23, 2020',
     modifiedAt: 'September 23, 2020',
