@@ -8,6 +8,8 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     height: theme.spacing(25),
+    backgroundImage: 'url(/images/saharsh.svg)',
+    backgroundSize: 'cover',
   },
 }));
 
@@ -16,17 +18,24 @@ const Intro = () => {
   return (
     <Grid container className={classes.intro}>
       <Grid item md={6} lg={4}>
-        <img
+        <div
           title='Saharsh Goyal'
           alt='Saharsh Goyal'
-          src='/images/photo.png'
+          src='/images/saharsh.svg'
           className={classes.avatar}
         />
       </Grid>
       <Grid item md={6} lg={8}>
         <Typography variant='h5'>
-          Hi, I'm Saharsh Goyal. I help people to grow their businesses with
-          quality software.
+          Hi{' '}
+          <span role='img' aria-label='hi'>
+            👋
+          </span>{' '}
+          my name is Saharsh
+        </Typography>
+        <Typography variant='h6'>
+          Thanks for stopping by! You can find my blogs on React, React Native,
+          and Javascript
         </Typography>
       </Grid>
     </Grid>
