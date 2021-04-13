@@ -1,6 +1,7 @@
 import React from 'react';
 import Closure from '../screens/Blogs/closure';
 import NegativeZero from '../screens/Blogs/negativeZero';
+import UseState from '../screens/Blogs/usestate';
 
 export const blogsMapping = {
   closures: {
@@ -33,6 +34,21 @@ export const blogsMapping = {
         'https://images.unsplash.com/photo-1528797471109-9a6649153bc3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1141&q=80',
       url: 'https://unsplash.com/@designwilde',
       credit: 'Melanie Dretvic',
+    },
+  },
+  usestate: {
+    title: 'Managing local state with React.useState()',
+    createdAt: 'April 14, 2021',
+    modifiedAt: 'April 14, 2021',
+    slug: "Taking care of your component's local state",
+    hashtags: ['usestate', 'react', 'context'],
+    component: <UseState />,
+    url: 'https://saharshgoyal.com/#/blogs/usestate',
+    featureImage: {
+      src:
+        'https://images.unsplash.com/photo-1567892737950-30c4db37cd89?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bG9jYWwlMjBpbmRpYW58ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
+      url: 'https://unsplash.com/@sujeethpotla',
+      credit: 'Sujeeth Potla',
     },
   },
   // yourPortfolio: {

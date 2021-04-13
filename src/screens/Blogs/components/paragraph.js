@@ -1,8 +1,9 @@
 import { Typography } from '@material-ui/core';
 import { default as React } from 'react';
-const Paragraph = ({ children }) => {
+const Paragraph = (props) => {
+  const { children, variant = 'body1' } = props;
   return (
-    <Typography paragraph variant='body1'>
+    <Typography paragraph variant={variant} {...props}>
       {children}
     </Typography>
   );
