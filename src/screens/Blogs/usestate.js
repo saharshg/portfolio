@@ -46,7 +46,7 @@ const UseState = () => {
           src='https://codesandbox.io/embed/beautiful-hypatia-7ycnv?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.js&theme=dark&view=preview'
           style={{
             width: '100%',
-            height: '200px',
+            height: '300px',
             border: 0,
             borderRadius: '4px',
             overflow: 'hidden',
@@ -73,7 +73,7 @@ const UseState = () => {
           src='https://codesandbox.io/embed/beautiful-hypatia-7ycnv?fontsize=14&hidenavigation=1&theme=dark'
           style={{
             width: '100%',
-            height: '200px',
+            height: '300px',
             border: 0,
             borderRadius: '4px',
             overflow: 'hidden',
