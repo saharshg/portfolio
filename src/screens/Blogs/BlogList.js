@@ -15,7 +15,7 @@ const BlogList = () => {
         {Object.keys(blogsMapping).map((blog) => (
           <ListItem button disableGutters key={blog}>
             <ListItemText
-              onClick={() => history.push(`/blogs/${blog}`)}
+              onClick={() => history.push(`/${blog}`)}
               primaryTypographyProps={{ gutterBottom: true }}
               primary={blogsMapping[blog].title}
               secondary={blogsMapping[blog].slug}

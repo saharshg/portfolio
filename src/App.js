@@ -22,10 +22,10 @@ import ScrollTop from './components/ScrollTop/ScrollTop';
 import colors from './constants/colors';
 import { AppContext } from './Context/context';
 import Contact from './screens/Contact';
-const Home = lazy(() => import('./screens/Home/Home'));
+// const Home = lazy(() => import('./screens/Home/Home'));
 const BlogList = lazy(() => import('./screens/Blogs/BlogList'));
 const Blogs = lazy(() => import('./screens/Blogs/Blogs'));
-const About = lazy(() => import('./screens/About'));
+// const About = lazy(() => import('./screens/About'));
 
 const createTheme = (type) => {
   let color = '#000';
@@ -99,18 +99,18 @@ const App = () => {
               <Box className={classes.about}>
                 <Suspense fallback={<div>Loading...</div>}>
                   <Switch>
-                    <Route path='/about'>
+                    {/* <Route path='/about'>
                       <About />
-                    </Route>
-                    <Route path='/blogs/:blog'>
+                    </Route> */}
+                    <Route path='/:blog'>
                       <Blogs />
                     </Route>
-                    <Route path='/blogs'>
+                    <Route path='/'>
                       <BlogList />
                     </Route>
-                    <Route path='/'>
+                    {/* <Route path='/'>
                       <Home />
-                    </Route>
+                    </Route> */}
                   </Switch>
                 </Suspense>
               </Box>

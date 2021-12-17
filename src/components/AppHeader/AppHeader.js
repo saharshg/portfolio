@@ -1,18 +1,9 @@
-import {
-  Box,
-  Button,
-  IconButton,
-  Switch,
-  Typography,
-  useMediaQuery,
-} from '@material-ui/core';
+import { Box, Switch, Typography, useMediaQuery } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
-import MenuIcon from '@material-ui/icons/Menu';
 import { default as React, useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { menuOptions } from '../../constants/menuOption';
 import { AppContext } from '../../Context/context';
 import AppMenu from '../AppMenu/AppMenu';
 
@@ -51,7 +42,7 @@ const AppHeader = () => {
   return (
     <>
       <AppBar
-        position='static'
+        position='fixed'
         id='back-to-top-anchor'
         className={classes.appBar}
       >
@@ -70,7 +61,7 @@ const AppHeader = () => {
           />
 
           <Box style={{ display: 'flex' }}>
-            {sm ? (
+            {/* {sm ? (
               <IconButton
                 edge='start'
                 color='inherit'
@@ -91,15 +82,17 @@ const AppHeader = () => {
 
                 return null;
               })
-            )}
+            )} */}
             {!sm && (
               <Typography
                 variant='h6'
-                onClick={() => history.push('/')}
+                onClick={() =>
+                  history.location.pathname !== '/' && history.push('/')
+                }
                 className={classes.title}
                 color='secondary'
               >
-                SG
+                Saharsh Goyal
               </Typography>
             )}
           </Box>
