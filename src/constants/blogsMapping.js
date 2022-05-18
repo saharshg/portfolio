@@ -1,6 +1,7 @@
 import React from 'react';
 import Closure from '../screens/Blogs/closure';
 import NegativeZero from '../screens/Blogs/negativeZero';
+import Markdown from '../screens/Blogs/Markdown';
 
 export const blogsMapping = {
   closures: {
@@ -30,6 +31,15 @@ export const blogsMapping = {
       url: 'https://unsplash.com/@designwilde',
       credit: 'Melanie Dretvic',
     },
+  },
+  accessibilityfornoninteractiveelements: {
+    title: 'Accessibility for non-interactive HTML elements in React',
+    createdAt: 'May 18, 2022',
+    modifiedAt: 'May 18, 2022',
+    slug: 'Making non-interactive HTML elements accessible',
+    hashtags: ['accessibility', 'html', 'non-interactive elements'],
+    component: <Markdown fileName='NonInteractiveElementsAccessibility.md' />,
+    url: 'https://saharshgoyal.com/#/blogs/accessibilityfornoninteractiveelements',
   },
   // usestate: {
   //   title: 'Managing local state with React.useState()',

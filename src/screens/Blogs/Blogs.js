@@ -23,14 +23,27 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     marginTop: '12px',
   },
+  markdown: {
+    '& blockquote': {
+      borderLeft: '10px solid',
+      borderLeftColor: '#f50057',
+      paddingLeft: '25px',
+      marginLeft: 0,
+    },
+    '& pre': {
+      border: '4px solid #f50057',
+      borderRadius: '12px',
+      background: '#f5005712',
+      padding: '20px',
+    },
+  },
 }));
 
 const Blogs = () => {
   const classes = useStyles();
   const { blog } = useParams();
-  const { title, modifiedAt, slug, featureImage, url, hashtags } = blogsMapping[
-    blog
-  ];
+  const { title, modifiedAt, slug, featureImage, url, hashtags } =
+    blogsMapping[blog];
   return (
     <Box>
       <Helmet>
@@ -41,7 +54,7 @@ const Blogs = () => {
         <meta property='og:url' content={url} />
         <meta property='og:title' content={title} />
         <meta property='og:description' content={slug} />
-        <meta property='og:image' content={featureImage.src} />
+        <meta property='og:image' content={featureImage?.src} />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='628' />
 
@@ -49,9 +62,9 @@ const Blogs = () => {
         <meta property='twitter:url' content={url} />
         <meta property='twitter:title' content={title} />
         <meta property='twitter:description' content={slug} />
-        <meta property='twitter:image' content={featureImage.src} />
+        <meta property='twitter:image' content={featureImage?.src} />
       </Helmet>
-      {blogsMapping[blog].component}
+      <Box className={classes.markdown}>{blogsMapping[blog].component}</Box>
       <Box className={classes.blogSharing}>
         <Grid item>
           <Typography color='secondary'>{modifiedAt}</Typography>
