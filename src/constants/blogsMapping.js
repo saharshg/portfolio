@@ -11,7 +11,7 @@ export const blogsMapping = {
     slug: 'Making non-interactive HTML elements accessible',
     hashtags: ['accessibility', 'html', 'non-interactive elements'],
     component: <Markdown fileName='NonInteractiveElementsAccessibility.md' />,
-    url: 'https://saharshgoyal.com/#/blogs/accessibilityfornoninteractiveelements',
+    url: 'https://saharshgoyal.com/#/accessibilityfornoninteractiveelements',
   },
   negativezero: {
     title: 'Negative Zero in JavaScript',
@@ -20,7 +20,7 @@ export const blogsMapping = {
     slug: 'Understanding negative zero and comparing objects in js.',
     hashtags: ['negativezero', 'javascript', 'object.is'],
     component: <NegativeZero />,
-    url: 'https://saharshgoyal.com/#/blogs/negativezero',
+    url: 'https://saharshgoyal.com/#/negativezero',
     featureImage: {
       src: 'https://images.unsplash.com/photo-1528797471109-9a6649153bc3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1141&q=80',
       url: 'https://unsplash.com/@designwilde',
@@ -34,7 +34,7 @@ export const blogsMapping = {
     slug: 'Briefly understanding closure and the lexical environment in javascript.',
     hashtags: ['closures', 'scoping', 'javascript'],
     component: <Closure />,
-    url: 'https://saharshgoyal.com/#/blogs/closures',
+    url: 'https://saharshgoyal.com/#/closures',
     featureImage: {
       src: 'https://images.unsplash.com/photo-1450562624248-869a3ec195f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
       url: 'https://unsplash.com/@cblack09?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText',
@@ -48,7 +48,7 @@ export const blogsMapping = {
   //   slug: "Taking care of your component's local state",
   //   hashtags: ['usestate', 'react', 'context'],
   //   component: <UseState />,
-  //   url: 'https://saharshgoyal.com/#/blogs/usestate',
+  //   url: 'https://saharshgoyal.com/#/usestate',
   //   featureImage: {
   //     src:
   //       'https://images.unsplash.com/photo-1567892737950-30c4db37cd89?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bG9jYWwlMjBpbmRpYW58ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
@@ -63,7 +63,7 @@ export const blogsMapping = {
   //   slug: 'Give it a read before developing your portfolio or blogging website',
   //   hashtags: ['portfolio', 'blogging', 'reactjs', 'SSR'],
   //   component: <Closure />,
-  //   url: 'https://saharshgoyal.com/#/blogs/yourPortfolio',
+  //   url: 'https://saharshgoyal.com/#/yourPortfolio',
   //   featureImage: {
   //     src:
   //       'https://images.unsplash.com/photo-1547111962-50a04ac74d73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',

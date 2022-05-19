@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: '12px',
       background: '#f5005712',
       padding: '20px',
+      overflow: 'scroll',
     },
   },
 }));
