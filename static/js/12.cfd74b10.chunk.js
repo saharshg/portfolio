@@ -1,2 +1,0 @@
-(this["webpackJsonpsaharsh-goyal-portfolio"]=this["webpackJsonpsaharsh-goyal-portfolio"]||[]).push([[12],{160:function(s,o,t){s.exports=t.p+"static/media/NonInteractiveElementsAccessibility.662e4132.md"}}]);
-//# sourceMappingURL=12.cfd74b10.chunk.js.map

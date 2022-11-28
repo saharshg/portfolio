@@ -2,7 +2,7 @@
 
 ---
 
-## To get rid of this warning:
+## To get rid of such warnings:
 
 > Visible, non-interactive elements with click handlers must have at least one keyboard listener jsx-a11y/click-events-have-key-events
 
