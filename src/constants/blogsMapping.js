@@ -4,6 +4,15 @@ import NegativeZero from '../screens/Blogs/negativeZero';
 import Markdown from '../screens/Blogs/Markdown';
 
 export const blogsMapping = {
+  animateOnScroll: {
+    title: 'Animate on scroll',
+    createdAt: 'Nov 29, 2022',
+    modifiedAt: 'Nov 29, 2022',
+    slug: 'Animate using HTML, CSS and JS on page scroll 🚀',
+    hashtags: ['animate', 'html', 'scrolling'],
+    githubUrl: 'https://github.com/saharshg/animate-on-scroll',
+    url: 'https://saharshgoyal.com/#/animate-on-scroll',
+  },
   accessibilityfornoninteractiveelements: {
     title: 'Accessibility for non-interactive HTML elements in React',
     createdAt: 'May 18, 2022',
